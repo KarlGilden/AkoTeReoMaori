@@ -1,0 +1,7 @@
+.form-button{
+    padding: 10px;
+    border: var(--secondary) solid 1px;
+    background-color:  var(--secondary);
+    color: white;
+    cursor: pointer;
+}

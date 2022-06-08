@@ -1,0 +1,14 @@
+.vertical-form{
+    display: flex;
+    flex-direction: column;
+    max-width: 400px;
+    padding: 10px;
+}
+
+.vertical-form h1{
+    margin-bottom: 10px;
+}
+
+.vertical-form label{
+    margin-bottom: 5px;
+}

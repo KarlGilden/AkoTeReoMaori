@@ -16,9 +16,14 @@ export function useAuth(){
 }
 
 const AuthProvider: FC<any> = ({children}:any) => {
-    const [user, setUser] = useState("Home")
+    const [user, setUser] = useState(null)
     
-
+    useEffect(() => {
+        onAuthStateChanged(auth, (user:any) => {
+            setUser(user)
+            console.log(user)
+        })
+    })
     const signup = async (email: string, password: string) => {
         try {
             await createUserWithEmailAndPassword(auth, email, password)
