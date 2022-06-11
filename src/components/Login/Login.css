@@ -12,3 +12,9 @@
 .vertical-form label{
     margin-bottom: 5px;
 }
+
+.input-wrapper{
+    margin-bottom: 10px;
+    display: flex;
+    flex-direction: column;
+}

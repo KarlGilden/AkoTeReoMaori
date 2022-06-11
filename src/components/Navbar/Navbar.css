@@ -1,11 +1,12 @@
 .logo{
-    margin-right: 20px;
-    width: 400px;
+    font-size: 12px;
+    display: flex;
 }
 
 .logo-span{
     color: rgb(203, 15, 15);
 }
+
 
 .navbar{
     width: 100%;
@@ -14,12 +15,21 @@
     display: flex;
     align-items: center;
     padding: 10px 5%;
+    position: absolute;
+}
+.menu-icon{
+    font-size: 30px;
+    margin-right: 20px;
 }
 
 .links{
     display: flex;
     width: 100%;
     justify-content: space-between;
+}
+
+.links{
+    display: none;
 }
 
 
@@ -31,4 +41,57 @@
 
 .link:hover{
     color: rgb(203, 15, 15);
+}
+
+.mobile-menu{
+    position: absolute;
+    top: 72px;
+    left: -10000px;
+    width: 100%;
+    min-height: calc(100vh - 72px);
+    background-color: white;
+    transition: all 0.3s ease;
+}
+
+.open-menu{
+    left: 0;
+    transition: all 0.3s ease;
+    height: 100%;
+    padding: 28px 0px 100px;
+    width: 100%;
+
+}
+
+.mobile-links{
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    font-size: 24px;
+    text-align: center;
+}
+
+.mobile-left-nav{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+
+    
+
+}
+.mobile-right-nav{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+
+}
+
+.mobile-link{
+    text-decoration: none;
+    color: black;
+    padding: 10px;
+    width: 100%;
 }

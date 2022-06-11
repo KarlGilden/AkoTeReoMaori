@@ -1,5 +1,5 @@
 export type AuthContextType = {
-    user: any,
+    user: object,
     signup: (email: string, password: string) => void;
     login: (email: string, password: string) => void;
     logout: (id: number) => void;

@@ -20,9 +20,12 @@ code {
 }
 
 :root{
-  --secondary:rgb(176, 11, 11);
+  --secondary:rgb(176, 11, 11); 
+  --secondary-dark:rgb(112, 8, 8);
+  --primary:black;
+
 }
 
 .page{
-  padding: 0px 5%;
+  padding: 72px 5% 0px 5%;
 }

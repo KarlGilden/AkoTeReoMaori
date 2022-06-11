@@ -1,0 +1,36 @@
+.CTAButton{
+    padding: 15px;
+    border-radius: 50px;
+    border: solid 2px transparent;
+    font-size: 1.25rem;
+    width: 200px;
+    margin: 20px 20px 20px 20px;
+    cursor: pointer;
+}
+
+.primary{
+    background-color: var(--secondary);
+    border: solid 2px var(--secondary);
+    color: white;
+    transition: 0.3s ease ;
+}
+
+.primary:hover{
+    background-color: var(--secondary-dark);
+    border: solid 2px var(--secondary-dark);
+    transition: 0.3s ease ;
+
+}
+
+.secondary{
+    background-color: transparent;
+    border: solid 2px var(--primary);
+    transition: 0.3s ease ;
+
+}
+
+.secondary:hover{
+    background-color: var(--primary);
+    color: white;
+    transition: 0.3s ease ;
+}

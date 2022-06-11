@@ -8,23 +8,26 @@ import {
 import { auth } from '../firebase/firebaseConfig'
 import { AuthContextType } from '../types/AuthTypes'
 
-var defaultValue:any;
-export const AuthContext = React.createContext(defaultValue);
+export const AuthContext = React.createContext();
 
 export function useAuth(){
-    return useContext(AuthContext)
+    const context = useContext(AuthContext)
+    if (context === undefined) {
+      throw new Error("useAuthContext must be within AuthProvider")
+    }
+    return context
 }
 
-const AuthProvider: FC<any> = ({children}:any) => {
+const AuthProvider = ({children}) => {
     const [user, setUser] = useState(null)
     
     useEffect(() => {
-        onAuthStateChanged(auth, (user:any) => {
+        onAuthStateChanged(auth, (user) => {
             setUser(user)
             console.log(user)
         })
     })
-    const signup = async (email: string, password: string) => {
+    const signup = async (email, password) => {
         try {
             await createUserWithEmailAndPassword(auth, email, password)
         }catch (error){
@@ -32,12 +35,11 @@ const AuthProvider: FC<any> = ({children}:any) => {
         }
     }
 
-    const login = async (email: string, password: string) => {
+    const login = async (email, password) => {
         try {
             await signInWithEmailAndPassword(auth, email, password)
-        }catch (error){
-            console.log(error)
-            return error
+        }catch(error){
+            return error.message
         }
      }
 
@@ -45,7 +47,7 @@ const AuthProvider: FC<any> = ({children}:any) => {
          await signOut(auth)
      }
 
-     const value: AuthContextType = {
+     const value = {
         user,
         signup,
         login,
