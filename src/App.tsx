@@ -9,6 +9,7 @@ import LoginPage from './pages/LoginPage/LoginPage';
 import Incubator from './pages/Incubator/Incubator';
 import Courses from './pages/Courses/Courses';
 import PrivateRoute from './components/PrivateRoute';
+import LessonView from './pages/LessonView/LessonView';
 function App() {
   return (
     <>
@@ -22,6 +23,7 @@ function App() {
 
           <Route element={<PrivateRoute authType="user"/>}>
             <Route path="/courses" element={<Courses/>}/>
+            <Route path="/lesson/:id" element={<LessonView/>}/>
           </Route>
 
           <Route element={<PrivateRoute authType="admin"/>}>

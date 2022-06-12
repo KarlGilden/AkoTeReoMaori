@@ -1,0 +1,13 @@
+.course-card{
+    width: 250px;
+    height: 100px;
+    padding: 20px;
+    background-color: lightgrey;
+    border-radius: 20px;
+    color: black;
+}
+
+.course-card a{
+    text-decoration: none;
+
+}
