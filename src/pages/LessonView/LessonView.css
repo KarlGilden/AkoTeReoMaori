@@ -1,0 +1,18 @@
+.lesson-view{
+    display: flex;
+    justify-content: center;
+    font-family: "Rubik";
+}
+
+.lesson-wrapper{
+    width: 100%;
+    max-width: 700px;
+}
+
+.lesson-description h1{
+    margin-bottom: 25px;
+}
+
+.lesson-text{
+    margin: 25px 0px;
+}
