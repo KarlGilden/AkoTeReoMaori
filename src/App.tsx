@@ -13,8 +13,8 @@ import LessonView from './pages/LessonView/LessonView';
 function App() {
   return (
     <>
-    <AuthProvider>
       <Router>
+      <AuthProvider>
         <Navbar/>
         <Routes>
           <Route path="/" element={<Home/>}/>
@@ -31,8 +31,8 @@ function App() {
           </Route>
 
         </Routes>
+      </AuthProvider>
       </Router>
-    </AuthProvider>
     </>
 
   );

@@ -7,6 +7,7 @@ import {
 } from 'firebase/auth'
 import { auth } from '../firebase/firebaseConfig'
 import { AuthContextType } from '../types/AuthTypes'
+import { useNavigate } from 'react-router-dom';
 
 export const AuthContext = React.createContext();
 
@@ -19,28 +20,45 @@ export function useAuth(){
 }
 
 const AuthProvider = ({children}) => {
-    const [user, setUser] = useState(null)
+    const navigate = useNavigate()
+    const [user, setUser] = useState(undefined)    
+    const [authLoading, setAuthLoading] = useState(true)
+
     
     useEffect(() => {
-        onAuthStateChanged(auth, (user) => {
-            setUser(user)
-            console.log(user)
-        })
-    })
+        getUser()
+    }, [])
+
+    const getUser = async () => {
+        setAuthLoading(true)
+        onAuthStateChanged(auth, (currentUser) => {
+            setUser(currentUser)
+            console.log(currentUser)
+        });
+        setAuthLoading(false)
+    }
+
     const signup = async (email, password) => {
+        setAuthLoading(true)
         try {
             await createUserWithEmailAndPassword(auth, email, password)
+            navigate('/courses')
         }catch (error){
             console.log(error)
         }
+        setAuthLoading(false)
     }
 
     const login = async (email, password) => {
+        setAuthLoading(true)
         try {
             await signInWithEmailAndPassword(auth, email, password)
+            navigate('/courses')
         }catch(error){
             return error.message
         }
+        setAuthLoading(false)
+
      }
 
      const logout = async () => {
@@ -50,6 +68,7 @@ const AuthProvider = ({children}) => {
      const value = {
         user,
         signup,
+        authLoading,
         login,
         logout
     }
