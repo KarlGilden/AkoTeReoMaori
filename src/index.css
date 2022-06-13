@@ -1,6 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Rubik&display=swap');
-
-*{
+@import url('https://fonts.googleapis.com/css2?family=Mada&display=swap');*{
   box-sizing: border-box;
   margin: 0;
   padding: 0;
@@ -27,7 +26,7 @@ code {
 }
 
 .page{
-  padding: 72px 5% 0px 5%;
+  padding: 72px 10% 0px 10%;
 }
 
 a{

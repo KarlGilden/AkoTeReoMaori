@@ -1,22 +1,29 @@
 .home-page{
     height: 100vh;
     width: 100%;
-    padding: 72px 5% 0px 5%;
+    padding: 72px 10% 0px 10%;
+
 }
 
 .home-header{
-    width: 100%;
-    text-align: center;
+    width: 60%;
+    margin-top: 50px;
+    display: flex;
+    flex-direction: column;
 }
 
 .home-header h1{
-    font-size: 50px;
+    font-size: 62px;
+    margin-bottom: 5px;
     font-family: 'Rubik', sans-serif;
 }
 
 .home-header p{
-    font-size: 16px;
-    font-family: 'Rubik', sans-serif;
+    margin-bottom: 10px;
+
+    font-size: 24px;
+    line-height: 1.75rem;
+    font-family: 'Mada', sans-serif;
 }
 
 .circle{
@@ -33,9 +40,45 @@
     width: 100%;
 }
 .about-section{
-    height: 100vh;
+    font-family: 'Rubik', sans-serif;
+    padding: 25px 10% 25px 10%;
+    min-height: 100vh;
     width: 100%;
     background-color: #000;
+    color: #fff;
+}
+
+.about-section h1{
+    font-size: 52px;
+}
+
+.about-section h2{
+    font-size: 32px;
+}
+
+.about-container{
+    padding: 20px 20px 20px 0;
+    width: 50%;
+}
+.about-container p{
+    margin-top: 20px;
+    font-size: 24px;
+    font-family: 'Mada', sans-serif;
+
+    line-height: 2rem;
+}
+
+.about-wrapper{
+    display: flex;
+    justify-content: space-between;
+}
+
+.separator{
+    width: 100%;
+    position: absolute;
+    bottom: -1px;
+    right: 0;
+    z-index: -10;
 }
 
 @media screen and (min-width: 2000px){
@@ -48,5 +91,30 @@
         font-size: 3rem;
         font-family: 'Rubik', sans-serif;
         margin-left: 10px;
+    }
+}
+
+@media screen and (max-width: 900px){
+    .home-header{
+        width: 100%;
+    }
+    .about-container{
+        width: 100%;
+    }
+}
+
+@media screen and (max-width: 560px){
+    .home-header{
+        align-items: center;
+        text-align: center;
+    }
+
+    .home-page{
+        padding: 72px 5%;
+    }
+
+    .about-container{
+        text-align: center;
+
     }
 }
