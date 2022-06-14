@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import FormButton from '../FormButton/FormButton'
+import FormButton from '../Buttons/FormButton/FormButton'
 import FormInput from '../FormInput/FormInput'
 import { useAuth } from '../../contexts/AuthContext'
 const Register = () => {

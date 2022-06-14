@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import { useParams } from 'react-router-dom'
-import CTAButton from '../../components/CTAButton/CTAButton'
+import CTAButton from '../../components/Buttons/CTAButton/CTAButton'
 import LessonDescription from '../../components/LessonDescription/LessonDescription'
 import Question from '../../components/Question/Question'
 import { courses, ILesson } from '../../data/data'

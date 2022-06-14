@@ -1,5 +1,5 @@
 import React from 'react'
-import CTAButton from '../../components/CTAButton/CTAButton'
+import CTAButton from '../../components/Buttons/CTAButton/CTAButton'
 import '../Home/Home.css'
 import Wave from '../../images/wave-haikei.svg'
 import { useNavigate } from 'react-router-dom'

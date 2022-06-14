@@ -1,6 +1,8 @@
 import React from 'react'
 import { IQuestion } from '../../data/data'
-import CTAButton from '../CTAButton/CTAButton'
+import CTAButton from '../Buttons/CTAButton/CTAButton'
+import QuizButton from '../Buttons/QuizButton/QuizButton'
+import Option from '../Option/Option'
 import './Question.css'
 interface IProps{
     question: IQuestion | undefined,
@@ -14,14 +16,16 @@ const Question = ({question, nextQuestion}:IProps) => {
             <h2>{question?.title}</h2>
         </div>
         <div className="answers">
-            <p>{question?.option1}</p>
-            <p>{question?.option2}</p>
-            <p>{question?.option3}</p>
-            <p>{question?.option4}</p>
-            <p>{question?.option5}</p>
+            <Option text={question?.option1}/>
+            <Option text={question?.option2}/>
+            <Option text={question?.option3}/>
+            <Option text={question?.option4}/>
+            <Option text={question?.option5}/>
+
+
         </div>
         <div className="question-footer">
-          <CTAButton primary={true} func={()=>{nextQuestion()}} text="Submit"/>
+          <QuizButton func={()=>{nextQuestion()}} text="Submit"/>
         </div>
     </div>
   )

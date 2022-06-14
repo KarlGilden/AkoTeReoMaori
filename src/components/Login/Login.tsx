@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 import { useAuth } from '../../contexts/AuthContext'
-import FormButton from '../FormButton/FormButton'
+import FormButton from '../Buttons/FormButton/FormButton'
 import FormInput from '../FormInput/FormInput'
 import './Login.css'
 const Login = () => {
