@@ -33,9 +33,7 @@ const PrivateRoute = (props) => {
   return (
     <>
 
-      {user && <Outlet/>}
-      {user == undefined && "Loading..."}
-      {user == null && user != undefined &&  <Navigate to="/login"/>}
+      {user ? <Outlet/> : <Navigate to="/login"/>}
 
     </>
 

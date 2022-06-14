@@ -5,6 +5,7 @@ export interface IQuestion{
     option3?:string | undefined,
     option4?:string | undefined,
     option5?:string | undefined,
+    answer?: string | undefined,
     complete?: boolean | undefined,
     correct?: boolean | undefined
   }
@@ -51,6 +52,7 @@ export interface IQuestion{
         "option3":"string",
         "option4":"string",
         "option5":"string",
+        "answer":"string",
         "complete": false,
         "correct": false
       },         
@@ -61,6 +63,7 @@ export interface IQuestion{
         "option3":"string",
         "option4":"string",
         "option5":"string",
+        "answer":"string",
         "complete": false,
         "correct": false
       },
@@ -71,6 +74,7 @@ export interface IQuestion{
         "option3":"string",
         "option4":"string",
         "option5":"string",
+        "answer":"string",
         "complete": false,
         "correct": false
       },
@@ -81,6 +85,7 @@ export interface IQuestion{
         "option3":"string",
         "option4":"string",
         "option5":"string",
+        "answer":"string",
         "complete": false,
         "correct": false
       },
@@ -91,6 +96,7 @@ export interface IQuestion{
         "option3":"string",
         "option4":"string",
         "option5":"string",
+        "answer":"string",
         "complete": false,
         "correct": false
       },
@@ -101,6 +107,7 @@ export interface IQuestion{
         "option3":"string",
         "option4":"string",
         "option5":"string",
+        "answer":"string",
         "complete": false,
         "correct": false
       },
@@ -111,6 +118,7 @@ export interface IQuestion{
         "option3":"string",
         "option4":"string",
         "option5":"string",
+        "answer":"string",
         "complete": false,
         "correct": false
       },
@@ -121,6 +129,7 @@ export interface IQuestion{
         "option3":"string",
         "option4":"string",
         "option5":"string",
+        "answer":"string",
         "complete": false,
         "correct": false
       },
@@ -131,6 +140,7 @@ export interface IQuestion{
         "option3":"string",
         "option4":"string",
         "option5":"string",
+        "answer":"string",
         "complete": false,
         "correct": false
       },
@@ -141,6 +151,7 @@ export interface IQuestion{
         "option3":"string",
         "option4":"string",
         "option5":"string",
+        "answer":"string",
         "complete": false,
         "correct": false
       }
