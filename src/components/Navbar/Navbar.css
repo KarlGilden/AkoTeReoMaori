@@ -1,12 +1,17 @@
 .logo{
     font-size: 12px;
     display: flex;
+    align-items: center;
 }
 
 .logo-span{
     color: rgb(203, 15, 15);
 }
 
+.links{
+    font-size: 16px;
+    margin-left: 25px;
+}
 
 .navbar{
     width: 100%;
@@ -14,6 +19,7 @@
     height: 72px;
     display: flex;
     align-items: center;
+    justify-content: space-between;
     padding: 10px 10%;
     position: absolute;
 }
@@ -24,7 +30,6 @@
 
 .links{
     display: flex;
-    width: 100%;
     justify-content: space-between;
 }
 
@@ -94,4 +99,14 @@
     color: black;
     padding: 10px;
     width: 100%;
+}
+
+@media screen and (min-width: 784px){
+    .links{
+        display: flex;
+    }
+
+    .menu-icon{
+        display: none;
+    }
 }

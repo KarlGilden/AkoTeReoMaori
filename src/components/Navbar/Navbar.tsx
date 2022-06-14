@@ -52,9 +52,7 @@ const Navbar = () => {
                 }
             
             <h1><span className='logo-span'>Ako</span> Te Reo Maori</h1>
-        </div>
-        <div className="links">
-            <div className="left-nav">
+            <div className="left-nav links">
                 {user ?
                 <>
                     <Link className='link' to={'/courses'}>Courses</Link>
@@ -69,7 +67,8 @@ const Navbar = () => {
                 }
                 
             </div>
-            <div className="right-nav">
+        </div>
+            <div className="right-nav links">
                 {user ? 
                 <Link onClick={logout} className='link' to={'/'}>Logout</Link>
                 :
@@ -79,7 +78,6 @@ const Navbar = () => {
                 </>
                 }
 
-            </div>
         </div>
     </div>
   )

@@ -41,8 +41,8 @@
 }
 .about-section{
     font-family: 'Rubik', sans-serif;
-    padding: 25px 10% 25px 10%;
-    min-height: 100vh;
+    padding: 25px 10% 50px 10%;
+    height: fit-content;
     width: 100%;
     background-color: #000;
     color: #fff;
