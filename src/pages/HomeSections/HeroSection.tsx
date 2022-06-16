@@ -17,8 +17,8 @@ const HeroSection = () => {
         <CTAButton func={()=>{navigate("register")}} primary={false} text="Signup Now"/>
       </div>
     </div>
+
   </section>
-  <img className='separator' src={Wave} alt="" />
   </>
 
   )

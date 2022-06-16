@@ -5,6 +5,7 @@ const AboutSection = () => {
   return (
     <>
     <section className='about-section'>
+
         <h1>The project</h1>
         <div className="about-wrapper">
 
