@@ -2,6 +2,7 @@
     font-size: 12px;
     display: flex;
     align-items: center;
+
 }
 
 .logo-span{
@@ -22,6 +23,7 @@
     justify-content: space-between;
     padding: 10px 10%;
     position: absolute;
+    z-index: 10;
 }
 .menu-icon{
     font-size: 30px;
