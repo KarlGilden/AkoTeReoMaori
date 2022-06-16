@@ -1,11 +1,15 @@
-import React from 'react'
+import React, { useState } from 'react'
 import './Option.css'
 interface IProps{
-  text:string | undefined
+  text:string | undefined,
+  setAnswer:(text:string | undefined)=>void
 }
-const Option = ({text}:IProps) => {
+const Option = ({text, setAnswer}:IProps) => {
+  const selectOption = () => {
+    setAnswer(text)
+  }
   return (
-    <div className='option'>{text}</div>
+    <div onClick={()=>{selectOption()}} className={`option`}>{text}</div>
   )
 }
 

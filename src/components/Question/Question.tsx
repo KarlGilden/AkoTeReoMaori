@@ -6,26 +6,20 @@ import Option from '../Option/Option'
 import './Question.css'
 interface IProps{
     question: IQuestion | undefined,
-    nextQuestion: ()=>void
+    setAnswer: (text:string |undefined)=>void
 }
-const Question = ({question, nextQuestion}:IProps) => {
+const Question = ({question, setAnswer}:IProps) => {
   return (
     <div className='question-wrapper'>
         <div className="question-text-wrapper">
-            
             <h2>{question?.title}</h2>
         </div>
         <div className="answers">
-            <Option text={question?.option1}/>
-            <Option text={question?.option2}/>
-            <Option text={question?.option3}/>
-            <Option text={question?.option4}/>
-            <Option text={question?.option5}/>
-
-
-        </div>
-        <div className="question-footer">
-          <QuizButton func={()=>{nextQuestion()}} text="Submit"/>
+            <Option setAnswer={setAnswer} text={question?.option1}/>
+            <Option setAnswer={setAnswer} text={question?.option2}/>
+            <Option setAnswer={setAnswer} text={question?.option3}/>
+            <Option setAnswer={setAnswer} text={question?.option4}/>
+            <Option setAnswer={setAnswer} text={question?.option5}/>
         </div>
     </div>
   )

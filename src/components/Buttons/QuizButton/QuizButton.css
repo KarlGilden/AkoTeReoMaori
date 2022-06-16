@@ -1,12 +1,18 @@
 .quiz-button{
-    padding: 15px;
-    border-radius: 50px;
+    padding: 5px;
+    border-radius: 10px;
     border: solid 2px transparent;
-    font-size: 1.25rem;
+    font-size: 1.5rem;
     width: 100%;
     cursor: pointer;
     font-family: 'Mada', sans-serif;
     background-color: var(--secondary);
     color: white;
+    margin: 20px;
+    
 
+}
+
+.quiz-button:hover {
+    background-color: var(--secondary-dark);
 }

@@ -1,3 +1,10 @@
 .option{
-    padding: 10px;
+    padding: 5px 15px;
+    margin: 10px;
+    font-size: 1.25rem;
+    border: lightgrey 2px solid;
+    border-bottom: lightgrey 3px solid;
+    border-right: lightgrey 3px solid;
+    width: 100%;
+    border-radius: 10px;
 }
