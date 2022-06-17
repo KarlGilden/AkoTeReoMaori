@@ -16,3 +16,14 @@
 .answers{
     width: 50%;
 }
+
+
+@media screen and (max-width: 474px){
+    .answers{
+        width: 100%;
+    }
+
+    .question-wrapper{
+        padding: 0;
+    }
+}

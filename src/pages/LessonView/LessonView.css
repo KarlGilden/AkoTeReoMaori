@@ -27,3 +27,10 @@
     display: flex;
     width: 50%;
 }
+
+
+@media screen and (max-width:474px){
+    .lesson-view{
+        padding: 0 5%;
+    }
+}
