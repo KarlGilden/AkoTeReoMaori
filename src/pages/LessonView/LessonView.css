@@ -14,6 +14,10 @@
     width: 100%;
 }
 
+.lesson-description h1{
+    margin-bottom: 25px;
+}
+
 .lesson-text{
     margin: 20px 0;
 }
@@ -31,6 +35,6 @@
 
 @media screen and (max-width:474px){
     .lesson-view{
-        padding: 0 5%;
+        padding: 72px 5%;
     }
 }
