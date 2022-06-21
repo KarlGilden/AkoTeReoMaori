@@ -35,14 +35,12 @@ const Quiz = () => {
             if(lesson?.questions[question].answer == answer){
                 setCorrect(true)
                 results.questions.push({correct: true, userAnswer: answer, answer: lesson?.questions[question].answer})
-                console.log(results)
             }else{
                 setCorrect(false)
                 results.questions.push({correct: false, userAnswer: answer, answer: lesson?.questions[question].answer})
-                console.log(results)
-
             }
         }
+        setAnswer(null)
     }
 
     const review = () => {
@@ -59,22 +57,22 @@ const Quiz = () => {
                 <h2>{lesson?.questions[question]?.title}</h2>
             </div>
             <div className="answers">
-                <Option setAnswer={setAnswer} text={lesson?.questions[question]?.option1}/>
-                <Option setAnswer={setAnswer} text={lesson?.questions[question]?.option2}/>
-                <Option setAnswer={setAnswer} text={lesson?.questions[question]?.option3}/>
-                <Option setAnswer={setAnswer} text={lesson?.questions[question]?.option4}/>
-                <Option setAnswer={setAnswer} text={lesson?.questions[question]?.option5}/>
+                <Option answer={answer} setAnswer={setAnswer} text={lesson?.questions[question]?.option1}/>
+                <Option answer={answer} setAnswer={setAnswer} text={lesson?.questions[question]?.option2}/>
+                <Option answer={answer} setAnswer={setAnswer} text={lesson?.questions[question]?.option3}/>
+                <Option answer={answer} setAnswer={setAnswer} text={lesson?.questions[question]?.option4}/>
+                <Option answer={answer} setAnswer={setAnswer} text={lesson?.questions[question]?.option5}/>
             </div>
-                <QuizButton func={submitQuestion} text={"Submit"}/>
+                <QuizButton disabled={answer == null ? true:false} func={submitQuestion} text={"Submit"}/>
         </div>
 
         <div className={`lesson-footer ${correct != null ? (correct == true ? "correct":"wrong"): ""}`}>
             {correct != null && (
                 lesson && question < lesson?.questions.length -1 ? 
 
-                <QuizButton func={nextQuestion} text={"Next"}/>
+                <QuizButton disabled={false} func={nextQuestion} text={"Next"}/>
                 :
-                <QuizButton func={review} text={"Review"}/>
+                <QuizButton disabled={false} func={review} text={"Review"}/>
             )}
         </div>
     </div>

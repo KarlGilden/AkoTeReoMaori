@@ -16,3 +16,7 @@
 .quiz-button:hover {
     background-color: var(--secondary-dark);
 }
+
+.quiz-button:disabled{
+    background-color: var(--secondary-disabled);
+}

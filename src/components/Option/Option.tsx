@@ -3,13 +3,14 @@ import './Option.css'
 interface IProps{
   text:string | undefined,
   setAnswer:(text:string | undefined)=>void
+  answer: string | undefined
 }
-const Option = ({text, setAnswer}:IProps) => {
+const Option = ({text, setAnswer, answer}:IProps) => {
   const selectOption = () => {
     setAnswer(text)
   }
   return (
-    <div onClick={()=>{selectOption()}} className={`option`}>{text}</div>
+    <div onClick={()=>{selectOption()}} className={`option ${answer == text ? "selected" : ""}`}>{text}</div>
   )
 }
 

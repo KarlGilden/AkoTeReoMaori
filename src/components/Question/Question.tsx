@@ -15,11 +15,7 @@ const Question = ({question, setAnswer}:IProps) => {
             <h2>{question?.title}</h2>
         </div>
         <div className="answers">
-            <Option setAnswer={setAnswer} text={question?.option1}/>
-            <Option setAnswer={setAnswer} text={question?.option2}/>
-            <Option setAnswer={setAnswer} text={question?.option3}/>
-            <Option setAnswer={setAnswer} text={question?.option4}/>
-            <Option setAnswer={setAnswer} text={question?.option5}/>
+
         </div>
     </div>
   )
