@@ -1,7 +1,7 @@
 import React from 'react'
-import { IQuestion } from '../../data/data'
-import CTAButton from '../Buttons/CTAButton/CTAButton'
-import QuizButton from '../Buttons/QuizButton/QuizButton'
+import { IQuestion } from '../../../data/data'
+import CTAButton from '../../Buttons/CTAButton/CTAButton'
+import QuizButton from '../../Buttons/QuizButton/QuizButton'
 import Option from '../Option/Option'
 import './Question.css'
 interface IProps{

@@ -1,12 +1,12 @@
 import React, { useEffect, useState } from 'react'
 import { useParams } from 'react-router-dom'
-import { courses, ILesson, IResult, results } from '../../data/data'
-import QuizButton from '../Buttons/QuizButton/QuizButton'
+import { courses, ILesson, IResult, results } from '../../../data/data'
+import QuizButton from '../../Buttons/QuizButton/QuizButton'
 import Question from '../Question/Question'
 import Option from '../Option/Option'
 import './Quiz.css'
 import '../Question/Question.css'
-import ResultsModal from '../ResultsModal/ResultsModal'
+import ResultsModal from '../../ResultsModal/ResultsModal'
 
 const Quiz = () => {
     let {id} =  useParams<Record<string, string | undefined>>()

@@ -1,6 +1,6 @@
 import React, { useContext, useEffect, useState } from 'react'
 import CTAButton from '../../components/Buttons/CTAButton/CTAButton';
-import Login from '../../components/Login/Login';
+import Login from '../../components/Authentication/Login/Login';
 import  { useAuth } from '../../contexts/AuthContext';
 import './Home.css'
 import HeroSection from '../HomeSections/HeroSection';

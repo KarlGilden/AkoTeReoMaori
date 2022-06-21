@@ -9,7 +9,7 @@ import Incubator from './pages/Incubator/Incubator';
 import Courses from './pages/Courses/Courses';
 import PrivateRoute from './components/PrivateRoute';
 import LessonView from './pages/LessonView/LessonView';
-import Quiz from './components/Quiz/Quiz';
+import Quiz from './components/QuizComponents/Quiz/Quiz';
 function App() {
   return (
     <>

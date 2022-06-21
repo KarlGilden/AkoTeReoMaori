@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
-import FormButton from '../Buttons/FormButton/FormButton'
-import FormInput from '../FormInput/FormInput'
-import { useAuth } from '../../contexts/AuthContext'
+import FormButton from '../../Buttons/FormButton/FormButton'
+import FormInput from '../../FormInput/FormInput'
+import { useAuth } from '../../../contexts/AuthContext'
 const Register = () => {
     const [email, setEmail] = useState("");
     const [password, setPassword] = useState("");
